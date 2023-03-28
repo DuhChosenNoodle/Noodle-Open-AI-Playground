@@ -6,7 +6,7 @@ with open('GPT-3-SECRET-KEY.json') as f:
     key = json.load(f)
 
 # extract the API key from the JSON data
-api_key = key['OPENAI_API_KEY']
+openai.api_key = key['OPENAI_API_KEY']
 
 # Prompt GPT3 to summarize a passage
 response = openai.Completion.create(
